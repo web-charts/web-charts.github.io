@@ -51,32 +51,32 @@
     </section>
     <div class="is-hidden-touch" style="height: 6rem"></div>
     <div class="is-hidden-desktop" style="height: 2rem"></div>
-    <section class="container columns">
-      <div
-        class="column is-flex is-flex-column is-centered"
-      >
-        <h1 class="is-size-3">
-          解决方案
-        </h1>
-        <div style="height: 1rem"></div>
-        <h2 class="is-size-4">
-          我们提供快速有力的解决方案
-        </h2>
-        <div style="height: 1rem"></div>
-        <p>
-          各类企业虽然在长期发展历程中已经积累了丰富的实践经验，
-          但由于信息反馈不及时、不精确、不全面等问题导致了大量浪费与运作成本的居高不下。
-          智慧物流解决方案可以通过各种自动化设备和ERP/WMS/WCS等帮助企业实现数据交换、
-          信息共享、承载货物仓储、物流信息平台等多种应用，提升管理水平，降低企业运营成本，提高综合竞争力。
-        </p>
+    <section class="container">
+      <div class="columns">
+        <div class="column is-flex is-flex-column is-centered">
+          <h1 class="is-size-3">
+            解决方案
+          </h1>
+          <div style="height: 1rem"></div>
+          <h2 class="is-size-4">
+            我们提供快速有力的解决方案
+          </h2>
+          <div style="height: 1rem"></div>
+          <p>
+            各类企业虽然在长期发展历程中已经积累了丰富的实践经验，
+            但由于信息反馈不及时、不精确、不全面等问题导致了大量浪费与运作成本的居高不下。
+            智慧物流解决方案可以通过各种自动化设备和ERP/WMS/WCS等帮助企业实现数据交换、
+            信息共享、承载货物仓储、物流信息平台等多种应用，提升管理水平，降低企业运营成本，提高综合竞争力。
+          </p>
+        </div>
+        <div style="width: 3rem; height: 2rem"></div>
+        <figure class="image column">
+          <VImage
+            path="service/solution.png"
+            style="width: 737px; height: 324px"
+          ></VImage>
+        </figure>
       </div>
-      <div style="width: 3rem; height: 2rem"></div>
-      <figure class="image column">
-        <VImage
-          path="service/solution.png"
-          style="width: 737px; height: 324px"
-        ></VImage>
-      </figure>
     </section>
     <div class="is-hidden-touch" style="height: 8rem"></div>
     <div class="is-hidden-desktop" style="height: 2rem"></div>

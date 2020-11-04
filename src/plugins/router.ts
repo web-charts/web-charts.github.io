@@ -13,6 +13,26 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/Products.Hoisters/index.vue")
   },
   {
+    path: "/products/agv",
+    name: "Products.Agv",
+    component: () => import("@/views/Products.Agv/index.vue")
+  },
+  {
+    path: "/products/rgv",
+    name: "Products.Rgv",
+    component: () => import("@/views/Products.Rgv/index.vue")
+  },
+  {
+    path: "/products/asrs",
+    name: "Products.Asrs",
+    component: () => import("@/views/Products.Asrs/index.vue")
+  },
+  {
+    path: "/products/palletizing-robot",
+    name: "Products.PalletizingRobot",
+    component: () => import("@/views/Products.PalletizingRobot/index.vue")
+  },
+  {
     path: "/about",
     name: "About",
     component: () => import("@/views/About/index.vue")

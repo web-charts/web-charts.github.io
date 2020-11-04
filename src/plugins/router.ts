@@ -41,6 +41,18 @@ const routes: Array<RouteRecordRaw> = [
     path: "/service",
     name: "Service",
     component: () => import("@/views/Service/index.vue")
+  },
+  {
+    path: "/prices/hoister",
+    name: "HoisterPrice",
+    component: () => import("@/views/Prices.Hoister/index.vue"),
+    children: [
+      {
+        path: "created",
+        name: "HoisterCreated",
+        component: () => import("@/views/Prices.Hoister/Created.vue")
+      }
+    ]
   }
 ];
 

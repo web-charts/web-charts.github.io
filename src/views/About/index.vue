@@ -119,10 +119,11 @@
 
 <script lang="ts">
 // import Hero from '@/components/Hero'
+import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
 import Timeline from "./Timeline.vue";
 
-export default {
+export default defineComponent({
   name: "About",
 
   components: {
@@ -145,7 +146,7 @@ export default {
       ]
     ]
   })
-};
+});
 </script>
 
 <style lang="sass">

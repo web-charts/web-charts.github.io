@@ -1,6 +1,5 @@
 <template>
   <div class="app-nav">
-    <div class="background"></div>
     <div
       v-class:box-shadow="isMenuActive"
       class="container is-flex is-vcentered"

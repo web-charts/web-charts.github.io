@@ -22,12 +22,7 @@
       </div>
     </Hero>
 
-    <VSection>
-      <h2 class="is-size-2 has-text-centered">
-        我们的服务
-      </h2>
-      <div style="height: 4rem"></div>
-
+    <VSection title="我们的服务">
       <div class="columns is-multiline">
         <div
           class="column is-half"
@@ -38,12 +33,8 @@
         </div>
       </div>
 
-      <div style="height: 5rem"></div>
-
-      <h2 class="is-size-2 has-text-centered">
-        合作伙伴
-      </h2>
-      <div style="height: 3rem"></div>
+    </VSection>
+    <VSection title="合作伙伴" style="padding-top: 0">
       <div
         v-for="(items, key) in partners" :key="key"
         class="columns is-centered"
@@ -58,16 +49,12 @@
           ></VImage>
         </div>
       </div>
-      <div class="is-hidden-mobile" style="height: 1rem"></div>
     </VSection>
 
-    <VSection background="white-ter">
-      <h2 class="is-size-2 is-flex is-centered">
-        产品介绍
-      </h2>
-
-      <div style="height: 4rem"></div>
-
+    <VSection
+      title="产品介绍"
+      background="white-ter"
+    >
       <div class="columns is-vcentered">
         <div class="column">
           <h2 class="is-size-3">

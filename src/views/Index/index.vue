@@ -56,7 +56,7 @@
     >
       <div class="columns is-vcentered">
         <div class="column">
-          <h2 class="is-size-3">
+          <h2 class="is-size-4">
             垂直物流输送系统
           </h2>
           <div v-style:height="height"></div>
@@ -84,7 +84,7 @@
     <VSection>
       <div class="columns is-vcentered">
         <div class="column">
-          <h2 class="is-size-3">
+          <h2 class="is-size-4">
             自动化立体仓库系统
           </h2>
           <div v-style:height="height"></div>
@@ -110,7 +110,7 @@
     <VSection background="white-ter">
       <div class="columns is-vcentered">
         <div class="column">
-          <h2 class="is-size-3">
+          <h2 class="is-size-4">
             物流设备
           </h2>
           <div v-style:height="height"></div>

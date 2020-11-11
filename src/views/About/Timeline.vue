@@ -1,14 +1,5 @@
 <template>
-  <div
-    class="container is-flex is-vcentered is-flex-column"
-    style="padding-top: 1rem; padding-bottom: 1rem"
-  >
-    <h1 class="is-hidden-touch is-size-3 is-flex is-centered">企业发展</h1>
-
-    <header>
-      <h1 class="is-hidden-desktop is-size-3">企业发展</h1>
-    </header>
-
+  <VSection title="企业发展">
     <ul class="timeline">
       <!-- Item 1 -->
       <li v-for="(item, index) in data" :key="index">
@@ -23,14 +14,19 @@
         </div>
       </li>
     </ul>
-  </div>
+  </VSection>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import VSection from "@/components/VSection/index.vue";
 
 export default defineComponent({
   name: "Timeline",
+
+  components: {
+    VSection
+  },
 
   data: () => ({
     data: [

@@ -44,15 +44,15 @@
         </p>
       </div>
     </div> -->
-    <VSection title="企业理念" style="padding-top: 0">
-      <div
-        v-for="(group, key) in briefs" :key="key"
-        class="columns"
-        style="margin-bottom: 5rem"
-      >
+    <VSection
+      title="企业理念"
+      background="white-ter"
+    >
+      <div class="columns is-multiline">
         <div
-          v-for="(item, key) in group" :key="key"
-          class="column has-text-centered"
+          class="column is-one-third has-text-centered"
+          v-for="(item, key) in briefs" :key="key"
+          style="margin-bottom: 3rem"
         >
           <span class="icon is-large">
             <i
@@ -65,7 +65,7 @@
       </div>
     </VSection>
 
-    <Timeline v-if="false"></Timeline>
+    <Timeline></Timeline>
 
     <VSection title="公司分布" style="padding-top: 0">
       <div class="columns">
@@ -159,16 +159,12 @@ export default defineComponent({
 
   data: () => ({
     briefs: [
-      [
-        { icon: "happiness", text: "以全体员工幸福为企业发展原动力" },
-        { icon: "service", text: "以服务客户，达成客户满意为企业发展目标" },
-        { icon: "development", text: "以与上下游供应商携手共进，共同发展为企业发展方向" }
-      ],
-      [
-        { icon: "sociology", text: "以创造企业财富回报社会为企业愿景" },
-        { icon: "manage", text: "以全员参与为企业管理方针" },
-        { icon: "fair", text: "以公平公正为企业经营准则" }
-      ]
+      { icon: "happiness", text: "以全体员工幸福为企业发展原动力" },
+      { icon: "service", text: "以服务客户，达成客户满意为企业发展目标" },
+      { icon: "development", text: "以与上下游供应商携手共进，共同发展为企业发展方向" },
+      { icon: "sociology", text: "以创造企业财富回报社会为企业愿景" },
+      { icon: "manage", text: "以全员参与为企业管理方针" },
+      { icon: "fair", text: "以公平公正为企业经营准则" }
     ]
   })
 });

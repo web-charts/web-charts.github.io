@@ -1,8 +1,6 @@
 <template>
   <div id="about">
-    <section class="container">
-      <div class="is-hidden-touch" style="height: 6rem"></div>
-      <div class="is-hidden-desktop" style="height: 0.75rem"></div>
+    <VSection style="margin-top: 0.5rem">
       <div class="columns is-vcentered">
         <div class="is-hidden-touch" style="height: 450px"></div>
         <figure class="image column">
@@ -25,9 +23,7 @@
           </h2>
         </div>
       </div>
-    </section>
-    <div class="is-hidden-touch" style="height: 4rem"></div>
-    <div class="is-hidden-desktop" style="height: 0.75rem"></div>
+    </VSection>
     <!-- <div
       style="width: 100%; padding: 3rem 0 3rem"
     >
@@ -48,40 +44,67 @@
         </p>
       </div>
     </div> -->
-    <div style="padding: 3rem 0 0">
-      <div class="container">
-        <h1
-          class="is-size-3 has-text-centered"
-          style="margin-bottom: 4rem"
-        >
-          企业理念
-        </h1>
+    <VSection title="企业理念" style="padding-top: 0">
+      <div
+        v-for="(group, key) in briefs" :key="key"
+        class="columns"
+        style="margin-bottom: 5rem"
+      >
         <div
-          v-for="(group, key) in briefs" :key="key"
-          class="columns"
-          style="margin-bottom: 5rem"
+          v-for="(item, key) in group" :key="key"
+          class="column has-text-centered"
         >
-          <div
-            v-for="(item, key) in group" :key="key"
-            class="column has-text-centered"
-          >
-            <span class="icon is-large">
-              <i
-                :class="'iconfont icon-' + item.icon"
-              ></i>
-            </span>
-            <div style="height: 1rem"></div>
-            <span>{{item.text}}</span>
-          </div>
+          <span class="icon is-large">
+            <i
+              :class="'iconfont icon-' + item.icon"
+            ></i>
+          </span>
+          <div style="height: 1rem"></div>
+          <span>{{item.text}}</span>
         </div>
       </div>
-    </div>
+    </VSection>
 
     <Timeline v-if="false"></Timeline>
 
-    <div class="company has-background-white-ter">
-      <div style="height: 2rem"></div>
-      <h1
+    <VSection title="公司分布" style="padding-top: 0">
+      <div class="columns">
+        <div class="column is-one-third">
+          <figure class="image is-3by2" style="margin-bottom: 1rem;">
+            <img src="./shanghai.jpg" alt="shanghai">
+          </figure>
+
+          <p class="is-size-5" style="margin-bottom: 0.5rem">
+            上海总部
+          </p>
+          <p>上海市奉贤区解放东路1018弄1号楼1008室</p>
+        </div>
+
+        <div class="column is-one-third">
+          <figure class="image is-3by2" style="margin-bottom: 1rem">
+            <img src="./zhuhai.jpg" alt="shanghai">
+          </figure>
+
+          <p class="is-size-5" style="margin-bottom: 0.5rem">
+            珠海分公司
+          </p>
+          <p>广东省珠海市金湾区红旗镇藤山一路68号</p>
+        </div>
+
+        <div class="column is-one-third">
+          <figure class="image is-3by2" style="margin-bottom: 1rem">
+            <img src="./dalian.jpg" alt="shanghai">
+          </figure>
+
+          <p class="is-size-5" style="margin-bottom: 0.5rem">
+            大连分公司
+          </p>
+          <p>辽宁省大连市开发区万达广场7号楼2217室</p>
+        </div>
+      </div>
+    </VSection>
+
+      <!-- <h1
         class="is-size-3"
         style="margin-bottom: 1.5rem"
       >
@@ -93,7 +116,7 @@
       <p>电话：13514118179 - 王先生</p>
       <p>邮箱：ang@als-yuchuan.com</p>
       <p>网站：www.als-yuchuan.com</p>
-      <p>地址：上海市奉贤区解放东路1018弄1号楼1008室</p>
+      <p>地址：</p>
     </div>
     <div class="company has-background-white-ter">
       <h1 class="is-size-4">
@@ -113,7 +136,7 @@
       <p>网站：www.als-yuchuan.com</p>
       <p>地址：辽宁省大连市经济开发区万达广场7号楼 2217室</p>
       <div style="height: 2rem"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -121,6 +144,7 @@
 // import Hero from '@/components/Hero'
 import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
+import VSection from "@/components/VSection/index.vue";
 import Timeline from "./Timeline.vue";
 
 export default defineComponent({
@@ -129,6 +153,7 @@ export default defineComponent({
   components: {
     // Hero,
     VImage,
+    VSection,
     Timeline,
   },
 

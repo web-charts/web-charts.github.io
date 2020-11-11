@@ -5,11 +5,9 @@
   >
     <div class="container">
       <div v-if="title !== ''">
-        <div class="is-size-2 has-text-centered">
+        <div class="is-title is-size-3 has-text-centered">
           {{title}}
         </div>
-        <div class="is-hidden-mobile" style="height: 5rem"></div>
-        <div class="is-hidden-tablet" style="height: 2rem"></div>
       </div>
       <slot name="title"></slot>
       <slot></slot>

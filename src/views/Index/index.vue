@@ -35,18 +35,17 @@
 
     </VSection>
     <VSection title="合作伙伴" style="padding-top: 0">
-      <div
-        v-for="(items, key) in partners" :key="key"
-        class="columns is-centered"
-      >
+      <div class="columns is-multiline">
         <div
-          v-for="(item, key) in items" :key="key"
-          class="column is-flex is-centered"
+          v-for="(item, key) in partners" :key="key"
+          class="column is-one-third is-flex is-centered"
         >
-          <VImage
-            :path="`home/partners/${item}.png`"
-            style="width: 320px; height: 160px;"
-          ></VImage>
+          <div class="box">
+            <VImage
+              :path="`home/partners/${item}.png`"
+              style="width: 320px; height: 160px;"
+            ></VImage>
+          </div>
         </div>
       </div>
     </VSection>
@@ -176,8 +175,8 @@ export default defineComponent({
   data: () => ({
     height: "0.75rem",
     partners: [
-      ["招商局", "格力", "武汉万吨"],
-      ["中外运", "世纪联华", "鑫荣懋"]
+      "招商局", "格力", "武汉万吨",
+      "中外运", "世纪联华", "鑫荣懋"
     ],
     reasons: [
       ["咨询规划", "提供生产、仓储物流园区的整体规划、解决方案，通过设计图、三维动画多角度演示。"],

@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <VSection style="margin-top: 0.5rem">
+    <VSection>
       <div class="columns is-vcentered">
         <div class="is-hidden-touch" style="height: 450px"></div>
         <figure class="image column">

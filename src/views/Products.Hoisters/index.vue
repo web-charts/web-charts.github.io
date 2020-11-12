@@ -1,6 +1,6 @@
 <template>
-  <div id="hoister">
-    <VSection style="margin-top: 8px">
+  <section id="hoister">
+    <VSection>
       <div class="columns is-vcentered">
         <div class="column">
           <h2 class="is-size-3">
@@ -46,7 +46,7 @@
         :is="tabs[currentTab].component"
       ></component>
     </VSection>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

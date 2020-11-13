@@ -71,10 +71,10 @@
         </div>
         <div style="width: 3rem; height: 2rem"></div>
         <figure class="image column">
-          <VImage
-            path="service/solution.png"
+          <img
+            src="https://mmbiz.qpic.cn/mmbiz_jpg/MkTmsKKhg7gRcg9eyyQ9fG9L2QlmISagDmNlM9etAbkW3EhKDiaBDbLZfg2BPbvCzHicYXOXl7BLvaAiaicYafBbkg/0?wx_fmt=jpeg"
             style="width: 737px; height: 324px"
-          ></VImage>
+          />
         </figure>
       </div>
     </section>

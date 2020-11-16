@@ -27,7 +27,7 @@ export default defineComponent({
       type: [String]
     },
     position: {
-      default: "center"
+      default: "default"
     },
     repeat: {
       default: "no-repeat",
@@ -60,6 +60,7 @@ export default defineComponent({
         style["background-repeat"] = this.repeat;
         style["background-image"] = this.imageURL;
         style["background-size"] = "cover";
+        style["background-position"] = this.position;
       }
 
       return style;

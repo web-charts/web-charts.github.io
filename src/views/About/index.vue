@@ -1,5 +1,21 @@
 <template>
   <div id="about">
+    <Hero
+      class="is-hidden-mobile"
+      color="white" image="about/banner.jpg"
+      style="height: 600px"
+      position="center"
+    >
+    </Hero>
+
+    <Hero
+      class="is-hidden-tablet"
+      color="white" image="about/banner.jpg"
+      style="height: 480px"
+      position="center"
+    >
+    </Hero>
+
     <VSection>
       <div class="columns is-vcentered">
         <div class="is-hidden-touch" style="height: 450px"></div>
@@ -8,10 +24,10 @@
         </figure>
         <div style="width: 32px"></div>
         <div class="column">
-          <h1 class="is-hidden-touch is-size-3">
+          <h1 class="is-hidden-mobile is-size-3">
             公司介绍
           </h1>
-          <h1 class="is-hidden-desktop is-size-3 has-text-centered">
+          <h1 class="is-hidden-tablet is-size-3 has-text-centered">
             公司介绍
           </h1>
           <div style="height: 1rem"></div>
@@ -48,18 +64,19 @@
       title="企业理念"
       background="white-ter"
     >
+      <div style="height: 3rem"></div>
       <div class="columns is-multiline">
         <div
-          class="column is-one-third has-text-centered"
+          class="column is-half is-vcentered is-flex"
           v-for="(item, key) in briefs" :key="key"
-          style="margin-bottom: 3rem"
+          style="margin-bottom: 4rem"
         >
-          <span class="icon is-large">
-            <i
-              :class="'iconfont icon-' + item.icon"
-            ></i>
+          <span class="icon is-large" style="margin-left: 1rem">
+            <i :class="'iconfont icon-' + item.icon"></i>
           </span>
-          <div style="height: 1rem"></div>
+
+          <span style="width: 1.5rem"></span>
+
           <span>{{item.text}}</span>
         </div>
       </div>
@@ -141,9 +158,9 @@
 </template>
 
 <script lang="ts">
-// import Hero from '@/components/Hero'
 import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
+import Hero from "@/components/Hero/index.vue";
 import VSection from "@/components/VSection/index.vue";
 import Timeline from "./Timeline.vue";
 
@@ -151,7 +168,7 @@ export default defineComponent({
   name: "About",
 
   components: {
-    // Hero,
+    Hero,
     VImage,
     VSection,
     Timeline,
@@ -164,7 +181,8 @@ export default defineComponent({
       { icon: "development", text: "以与上下游供应商携手共进，共同发展为企业发展方向" },
       { icon: "sociology", text: "以创造企业财富回报社会为企业愿景" },
       { icon: "manage", text: "以全员参与为企业管理方针" },
-      { icon: "fair", text: "以公平公正为企业经营准则" }
+      { icon: "fair", text: "以公平公正为企业经营准则" },
+      { icon: "engeneering", text: "以自主创新，奉献精品工程为团队使命" }
     ]
   })
 });

@@ -30,17 +30,12 @@ export default defineComponent({
 
   data: () => ({
     data: [
-      ["2015-1", "公司正式成立"],
-      ["2015-3", "aaaaaaaaaaaa"],
-      ["2015-6", "bbbbbbbbbbbbbbbb"],
-      ["2016-4", "cccccccccccccccccc"],
-      ["2016-9", "aaadddaaaaaaaaaa"],
-      ["2017-5", "deeeeeeeeeeeeeeee"],
-      ["2018-1", "ffffffffffffffff"],
-      ["2018-12", "qqqqqqqqqqqqqqqq"],
-      ["2019-5", "ooooooooooooooo"],
-      ["2019-10", "uuuuuuuuuuuuuuuuuuuu"],
-      ["2020-3", "nnnnnnnnnnnnnnnnnn"]
+      ["2019-12", "通过 ISO 9001/14001/45001 国际质量管理体系认证"],
+      ["2018-9", "上海玉串注册资金增至人民币5千万元"],
+      ["2018-6", "大连天瞳科技有限公司成立"],
+      ["2017-1", "上海玉串注册资金增至人民币1千万元"],
+      ["2016-1", "珠海分公司正式成立"],
+      ["2015-2", "上海玉串正式成立"],
     ]
   })
 });
@@ -194,12 +189,12 @@ header p {
   bottom: -4px;
 }
 
-.direction-l,
-.direction-r {
-  float: none;
-  width: 100%;
-  text-align: center;
-}
+// .direction-l,
+// .direction-r {
+//   float: none;
+//   width: 100%;
+//   text-align: center;
+// }
 
 .flag-wrapper {
   text-align: center;
@@ -273,7 +268,7 @@ header p {
   position: relative;
   margin: 1em 0 0 0;
   padding: 0.75rem;
-  background: rgb(254, 254, 254);
+  background: whitesmoke;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
@@ -286,6 +281,7 @@ header p {
   margin: 1em 0 0 0;
   padding: 0.75rem;
   z-index: 15;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -318,14 +314,12 @@ header p {
     position: relative;
     width: 310px;
     float: left;
-    text-align: right;
   }
 
   .direction-r {
     position: relative;
     width: 310px;
     float: right;
-    text-align: left;
   }
 
   .flag-wrapper {
@@ -396,7 +390,6 @@ header p {
     position: relative;
     width: 380px;
     float: right;
-    text-align: left;
   }
 }
 </style>

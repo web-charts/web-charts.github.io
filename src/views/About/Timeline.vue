@@ -7,10 +7,10 @@
           <div class="flag-wrapper">
             <span class="hexa"></span>
             <span class="time-wrapper">
-              <span class="time">{{item[0]}}</span>
+              <span class="time box">{{item[0]}}</span>
             </span>
           </div>
-          <div v-if="item[1]" class="desc">{{item[1]}}</div>
+          <div v-if="item[1]" class="desc box">{{item[1]}}</div>
         </div>
       </li>
     </ul>
@@ -158,7 +158,7 @@ header p {
 }
 
 .timeline li {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 .timeline .hexa {
@@ -227,20 +227,6 @@ header p {
   pointer-events: none;
 }
 
-.direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15),
-    0 0 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-}
-
-.direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15),
-    0 0 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-}
-
 .time-wrapper {
   display: block;
   position: relative;
@@ -261,17 +247,13 @@ header p {
 .time {
   background: #00c4f3;
   display: inline-block;
+  color: #fff;
   padding: 0.75rem;
 }
 
 .desc {
   position: relative;
   margin: 1em 0 0 0;
-  padding: 0.75rem;
-  background: whitesmoke;
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   z-index: 15;
 }
 
@@ -279,7 +261,6 @@ header p {
 .direction-r .desc {
   position: relative;
   margin: 1em 0 0 0;
-  padding: 0.75rem;
   z-index: 15;
   text-align: left;
 }

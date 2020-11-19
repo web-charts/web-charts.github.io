@@ -1,19 +1,17 @@
 <template>
   <div
-    class="is-bordered is-radius is-flex is-vcentered"
-    style="padding: 1.5rem; height: 160px"
+    class="box is-radius is-flex is-vcentered"
+    style="height: 160px; padding-top: 2rem; padding-bottom: 2rem"
   >
     <span class="icon is-large">
       <i class="iconfont icon-major"></i>
     </span>
 
-    <div
-      style="margin-left: 1rem"
-    >
+    <div style="margin-left: 1rem">
       <p class="has-text-weight-semibold">
         {{title}}
       </p>
-      <div style="height: 0.25rem"></div>
+      <div style="height: 0.5rem"></div>
       <p>
         {{content}}
       </p>

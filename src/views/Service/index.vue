@@ -1,5 +1,15 @@
 <template>
   <div id="service">
+    <Hero image="service/banner.jpg" position="center">
+      <div style="width: 560px">
+        <h1 class="is-size-2 has-text-white">
+          客户服务
+        </h1>
+        <p class="is-size-5 has-text-white">
+          用服务推动自动化发展
+        </p>
+      </div>
+    </Hero>
     <section class="container">
       <div class="is-hidden-touch" style="height: 6rem"></div>
       <div class="is-hidden-desktop" style="height: 2rem"></div>
@@ -86,11 +96,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
+import Hero from "@/components/Hero/index.vue";
 
 export default defineComponent({
   name: "Service",
 
   components: {
+    Hero,
     VImage
   }
 });

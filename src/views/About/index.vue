@@ -6,154 +6,88 @@
       style="height: 600px"
       position="center"
     >
+      <div style="width: 560px">
+        <h1 class="is-size-2 has-text-white">
+          始于 2015
+        </h1>
+        <p class="is-size-5 has-text-white">
+          坚持创新，改变世界
+        </p>
+      </div>
     </Hero>
 
     <Hero
       class="is-hidden-tablet"
       color="white" image="about/banner.jpg"
-      style="height: 480px"
+      style="height: 320px"
       position="center"
     >
+      <div style="width: 560px">
+        <h1 class="is-size-2 has-text-white">
+          始于 2015
+        </h1>
+        <p class="is-size-5 has-text-white">
+          坚持创新，改变世界
+        </p>
+      </div>
     </Hero>
 
     <VSection>
       <div class="columns is-vcentered">
         <div class="is-hidden-touch" style="height: 450px"></div>
-        <figure class="image column">
+        <figure class="image column is-5">
           <VImage path="about/company.jpg"></VImage>
         </figure>
-        <div style="width: 32px"></div>
+        <div style="width: 1rem"></div>
         <div class="column">
-          <h1 class="is-hidden-mobile is-size-3">
-            公司介绍
-          </h1>
-          <h1 class="is-hidden-tablet is-size-3 has-text-centered">
-            公司介绍
-          </h1>
-          <div style="height: 1rem"></div>
-          <h2>
-            上海玉串总部在上海，是由海外归国行业技术精英组建而成，是一家以自动化物流设备集成为依托，
-            集物流装备研发、系统规划、设计、加工制造、安装调试、客户培训、售后服务于一体的一站式物流输送系统集成的企业。
-            本公司致力于帮助客户全面提高生产资材供给、成品垂直/水平输送之自动化水平，
-            最终实现客户的生产物流、仓储物流的流程自动化、信息可视化的水平。
-          </h2>
+          <div class="content">
+            <p class="is-hidden-mobile is-size-3">
+              公司介绍
+            </p>
+            <p class="is-hidden-tablet is-size-3 has-text-centered">
+              公司介绍
+            </p>
+            <p>
+              上海玉串总部在上海，是由海外归国行业技术精英组建而成，是一家以自动化物流设备集成为依托，
+              集物流装备研发、系统规划、设计、加工制造、安装调试、客户培训、售后服务于一体的一站式物流输送系统集成的企业。
+              本公司致力于帮助客户全面提高生产资材供给、成品垂直/水平输送之自动化水平，
+              最终实现客户的生产物流、仓储物流的流程自动化、信息可视化的水平。
+            </p>
+            <p>
+              本公司拥有完整、科学的质量管理体系，我们的诚信、实力和产品质量获得业界的广泛认可。
+              本着“敢于创新，稳重求进”的精神，加强生产管理、严把质量关，
+              经全面改造的公司，以其产品质量稳定和价格优势，在竞争市场中脱颖而出。
+              本司致力于不断改进产品生产工艺和品质，并且不断的发展新的产品去保持市场的竞争能力。
+              以“真诚、务实、优质、高效”为企业宗旨，竭诚为各界人士服务。
+            </p>
+          </div>
         </div>
       </div>
     </VSection>
-    <!-- <div
-      style="width: 100%; padding: 3rem 0 3rem"
-    >
-      <div class="container">
-        <h1
-          class="is-size-3"
-          style="margin-bottom: 1rem"
-        >
-        </h1>
-        <p>
 
-        </p>
-        <div style="height: 1rem"></div>
-        <p>
-          我们以真诚、责任为合作前提，携手客户分析物流流程中的课题，
-          与客户共同制定自动化物流系统解决方案，并用3D演示方式直观、
-          科学的展示系统投入运行的实际效果，从而降低系统投入成本，规避投资风险。
-        </p>
-      </div>
-    </div> -->
-    <VSection
-      title="企业理念"
-      background="white-ter"
-    >
-      <div style="height: 3rem"></div>
+    <VSection title="企业理念" style="padding: 0 0 0 0">
       <div class="columns is-multiline">
         <div
-          class="column is-half is-vcentered is-flex"
+          class="column is-half"
           v-for="(item, key) in briefs" :key="key"
-          style="margin-bottom: 4rem"
         >
-          <span class="icon is-large" style="margin-left: 1rem">
-            <i :class="'iconfont icon-' + item.icon"></i>
-          </span>
+          <div
+            class="box is-flex is-vcentered"
+            style="height: 100%; width: 100%; padding: 2rem 2rem"
+          >
+            <span class="icon is-large" style="margin-left: 1rem">
+              <i :class="'iconfont icon-' + item.icon"></i>
+            </span>
 
-          <span style="width: 1.5rem"></span>
+            <span style="width: 1.5rem"></span>
 
-          <span>{{item.text}}</span>
+            <span>{{item.text}}</span>
+          </div>
         </div>
       </div>
     </VSection>
 
     <Timeline></Timeline>
-
-    <VSection title="公司分布" style="padding-top: 0">
-      <div class="columns">
-        <div class="column is-one-third">
-          <figure class="image is-3by2" style="margin-bottom: 1rem;">
-            <img src="./shanghai.jpg" alt="shanghai">
-          </figure>
-
-          <p class="is-size-5" style="margin-bottom: 0.5rem">
-            上海总部
-          </p>
-          <p>上海市奉贤区解放东路1018弄1号楼1008室</p>
-        </div>
-
-        <div class="column is-one-third">
-          <figure class="image is-3by2" style="margin-bottom: 1rem">
-            <img src="./zhuhai.jpg" alt="shanghai">
-          </figure>
-
-          <p class="is-size-5" style="margin-bottom: 0.5rem">
-            珠海分公司
-          </p>
-          <p>广东省珠海市金湾区红旗镇藤山一路68号</p>
-        </div>
-
-        <div class="column is-one-third">
-          <figure class="image is-3by2" style="margin-bottom: 1rem">
-            <img src="./dalian.jpg" alt="shanghai">
-          </figure>
-
-          <p class="is-size-5" style="margin-bottom: 0.5rem">
-            大连分公司
-          </p>
-          <p>辽宁省大连市开发区万达广场7号楼2217室</p>
-        </div>
-      </div>
-    </VSection>
-
-      <!-- <h1
-        class="is-size-3"
-        style="margin-bottom: 1.5rem"
-      >
-        公司地址
-      </h1>
-      <h1 class="is-size-4">
-        上海总部
-      </h1>
-      <p>电话：13514118179 - 王先生</p>
-      <p>邮箱：ang@als-yuchuan.com</p>
-      <p>网站：www.als-yuchuan.com</p>
-      <p>地址：</p>
-    </div>
-    <div class="company has-background-white-ter">
-      <h1 class="is-size-4">
-        珠海分公司
-      </h1>
-      <p>电话：18578268613 - 张女士</p>
-      <p>邮箱：michellezhang@als-yuchuan.com</p>
-      <p>网站：www.als-yuchuan.com</p>
-      <p>地址：珠海市金湾区红旗镇藤山一路68号华兴豪庭2-2-703</p>
-    </div>
-    <div class="company has-background-white-ter">
-      <h1 class="is-size-4">
-        大连分公司
-      </h1>
-      <p>电话：15021309685 - 贾先生</p>
-      <p>邮箱：ajia-no1@als-yuchuan.com</p>
-      <p>网站：www.als-yuchuan.com</p>
-      <p>地址：辽宁省大连市经济开发区万达广场7号楼 2217室</p>
-      <div style="height: 2rem"></div>
-    </div> -->
   </div>
 </template>
 
@@ -183,7 +117,7 @@ export default defineComponent({
       { icon: "manage", text: "以全员参与为企业管理方针" },
       { icon: "fair", text: "以公平公正为企业经营准则" },
       { icon: "engeneering", text: "以自主创新，奉献精品工程为团队使命" }
-    ]
+    ],
   })
 });
 </script>

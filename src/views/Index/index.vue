@@ -26,15 +26,14 @@
       <div class="columns is-multiline">
         <div
           class="column is-half"
-          style="height: 100%"
           v-for="([title, content], key) in reasons" :key="key"
         >
           <TheReason :title="title" :content="content" />
         </div>
       </div>
-
     </VSection>
-    <VSection title="合作伙伴" style="padding-top: 0">
+
+    <VSection title="合作伙伴" style="padding-top: 0;">
       <div class="columns is-multiline">
         <div
           v-for="(item, key) in partners" :key="key"
@@ -81,7 +80,7 @@
       </div>
     </VSection>
 
-    <VSection>
+    <VSection background="white">
       <div class="columns is-vcentered">
         <div class="column">
           <h2 class="is-size-4">
@@ -134,7 +133,7 @@
       </div>
     </VSection>
 
-    <VSection>
+    <VSection background="white">
       <div
         class="is-flex"
         style="justify-content: center; margin-bottom: 3rem"
@@ -179,10 +178,14 @@ export default defineComponent({
       "中外运", "世纪联华", "鑫荣懋"
     ],
     reasons: [
-      ["咨询规划", "提供生产、仓储物流园区的整体规划、解决方案，通过设计图、三维动画多角度演示。"],
-      ["软硬件系统设计", "专业的水平、垂直智能输送系统硬件及软件设计，以及对现有系统进行改进和优化。"],
-      ["生产制造", "定制自动化设备，具备合理的生产管理体系以及稳定的供应链。"],
-      ["安装调试", "专业人员驻场实施硬件组装与软件开发调试，保证项目按时交付。"]
+      // ["咨询规划", "提供生产、仓储物流园区的整体规划、解决方案，通过设计图、三维动画多角度演示。"],
+      // ["软硬件系统设计", "专业的水平、垂直智能输送系统硬件及软件设计，以及对现有系统进行改进和优化。"],
+      // ["生产制造", "定制自动化设备，具备合理的生产管理体系以及稳定的供应链。"],
+      // ["安装调试", "专业人员驻场实施硬件组装与软件开发调试，保证项目按时交付。"]
+      ["咨询规划", "智能工厂、仓储智慧物流园区的整体规划及解决方案，通过设计图、仿真、三维动画进行多角度演示"],
+      ["软硬件系统设计", "定制化需求的智能物流输送系统软件和硬件设计，以及对现有系统进行改进优化"],
+      ["生产制造", "基于日本、德国的生产体系加工体系、现代化加工设备、稳定的供应链，打造一流的产品"],
+      ["安装调试", "专业人员驻场实施硬件组装与软件系统调试，确保项目按时交付并提供后续维保服务"]
     ],
   }),
 

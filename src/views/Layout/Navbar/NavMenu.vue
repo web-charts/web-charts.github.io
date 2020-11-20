@@ -17,10 +17,17 @@
         <ul v-if="menu.children">
           <li v-for="(submenu, key) in menu.children" :key="key">
             <router-link
+              custom
               :to="submenu.route"
               @click.self="handleClick"
+              v-slot="{ navigate, isActive }"
             >
-              {{submenu.text}}
+              <a
+                v-class:is-active="isActive"
+                @click="navigate"
+              >
+                {{submenu.text}}
+              </a>
             </router-link>
           </li>
         </ul>

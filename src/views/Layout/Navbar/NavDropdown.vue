@@ -16,11 +16,20 @@
         @click="isHovered = false"
       >
         <router-link
+          custom
           v-for="(menu, key) in menus"
           :key="key" tag="p"
-          class="dropdown-item"
           :to="menu.route"
-        >{{menu.text}}</router-link>
+          v-slot="{ navigate, isActive }"
+        >
+          <p
+            class="dropdown-item"
+            v-class:is-active="isActive"
+            @click="navigate"
+          >
+            {{menu.text}}
+          </p>
+        </router-link>
       </div>
     </div>
   </div>

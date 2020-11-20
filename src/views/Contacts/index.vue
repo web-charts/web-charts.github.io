@@ -94,7 +94,7 @@ export default defineComponent({
         text: "上海市奉贤区解放东路1018弄1号楼1008室",
         contacts: "王先生",
         tel: "13514118179",
-        mail: "ang@als-yuchuan.com"
+        mail: "wang@als-yuchuan.com"
       },
       {
         icon: "about/zhuhai.jpg",

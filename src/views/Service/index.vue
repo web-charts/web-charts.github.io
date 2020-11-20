@@ -6,7 +6,7 @@
           客户服务
         </h1>
         <p class="is-size-5 has-text-white">
-          用服务推动自动化发展
+          一体化解决方案，让自动化触手可及
         </p>
       </div>
     </Hero>

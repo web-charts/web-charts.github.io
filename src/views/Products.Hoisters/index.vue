@@ -12,13 +12,17 @@
             信息以及控制的组合实现货物水平和垂直自由搬运的一种自动非载人精密设备。
           </p>
         </div>
-        <div style="width: 2rem; height: 1rem"></div>
+        <div style="width: 6rem; height: 2rem"></div>
 
-        <div class="column">
-          <figure class="image">
-            <img
-              src="https://mmbiz.qpic.cn/mmbiz_png/MkTmsKKhg7gRcg9eyyQ9fG9L2QlmISagdd51H7aYZiarEviaJdtLWRpW7m0XW46X1yD5AtrXqwkYah8CUIWTsd8Q/0?wx_fmt=png"
-            >
+        <div
+          class="column is-narrow is-flex is-centered"
+          style="padding-bottom: 0"
+        >
+          <figure
+            class="image"
+            style="width: calc(350px * 0.85); height: calc(680px * 0.85)"
+          >
+            <VImage path="hoisters/drum/animation.gif"></VImage>
           </figure>
         </div>
       </div>
@@ -51,6 +55,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import VImage from "@/components/Image.vue";
 import VSection from "@/components/VSection/index.vue";
 import PLType from "./PLType.vue";
 import Advantages from "./Advantages.vue";
@@ -61,6 +66,7 @@ export default defineComponent({
   name: "Hostier",
 
   components: {
+    VImage,
     VSection,
     Advantages,
     DrumpType,

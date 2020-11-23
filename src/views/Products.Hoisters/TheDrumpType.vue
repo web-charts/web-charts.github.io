@@ -1,33 +1,29 @@
 <template>
   <div>
-    <Description
+    <TheDescription
       :title="title"
       :sub-title="subTitle"
       image="hoisters/drum/animation.gif"
       :features="features"
-    ></Description>
-    <div style="height: 2rem"></div>
-    <Device image="hoisters/drum/structure.jpg"></Device>
-    <Cases :images="[
+    />
+    <!-- <Cases :images="[
       'hoisters/drum/case-1.jpeg',
       'hoisters/drum/case-2.jpg'
-    ]"></Cases>
+    ]"></Cases> -->
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Cases from "./Cases.vue";
-import Description from "./Description.vue";
-import Device from "./Device.vue";
+// import Cases from "./Cases.vue";
+import TheDescription from "./TheDescription.vue";
 
 export default defineComponent({
-  name: "DrumpTypeHoister",
+  name: "TheDrumpTypeHoister",
 
   components: {
-    Cases,
-    Device,
-    Description
+    // Cases,
+    TheDescription
   },
 
   data: () => ({

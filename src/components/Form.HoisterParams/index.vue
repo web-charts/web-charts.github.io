@@ -78,6 +78,7 @@
     </section>
 
     <h2>搬送能力</h2>
+
     <section class="field is-flex is-vcentered">
       <template
         v-for="key in ['1~2F', '1~3F', '1~4F', '1~5F']"

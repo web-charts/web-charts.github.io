@@ -61,7 +61,7 @@
 
     <TheAdvantages />
 
-    <VSection title="提升机机型" style="padding-bottom: 0;">
+    <VSection title="提升机机型" style="padding-bottom: 0">
       <div class="field has-addons has-addons-centered">
         <p
           v-for="(tab, key) in tabs" :key="key"
@@ -82,6 +82,8 @@
       v-if="tabs[currentTab].component"
       :is="tabs[currentTab].component"
     ></component>
+
+    <TheTransplotRoutes/>
   </section>
 </template>
 
@@ -93,6 +95,7 @@ import VSection from "@/components/VSection/index.vue";
 import TheAdvantages from "./TheAdvantages.vue";
 import TheDrumpType from "./TheDrumpType.vue";
 import TheSigmaType from "./TheSigmaType.vue";
+import TheTransplotRoutes from "./TheTransplotRoutes.vue";
 import ThePLType from "./ThePLType.vue";
 
 export default defineComponent({
@@ -106,6 +109,7 @@ export default defineComponent({
     TheDrumpType,
     TheSigmaType,
     ThePLType,
+    TheTransplotRoutes
   },
 
   data: () => ({

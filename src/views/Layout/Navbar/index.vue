@@ -4,9 +4,9 @@
       v-class:box-shadow="isMenuActive"
       class="container is-flex is-vcentered"
     >
-      <Logo></Logo>
+      <Logo />
       <div class="is-flex-auto"></div>
-      <NavItems :menus="menus"></NavItems>
+      <NavItems :menus="menus" />
       <div
         class="nav-item is-hidden-desktop"
         style="margin-top: 0.5rem"
@@ -27,7 +27,7 @@
       <NavMenu
         :menus="menus"
         @click-item="isMenuActive = false"
-      ></NavMenu>
+      />
     </div>
   </div>
 </template>
@@ -61,10 +61,11 @@ export default defineComponent({
           { text: "码垛机器人", route: "/products/palletizing-robot" },
         ]
       },
+      { text: "企业资讯", link: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NzIxMTgyMA==&action=getalbum&album_id=1346581013702705154&scene=173&from_msgid=2247484657&from_itemidx=1&count=3#wechat_redirect" },
       // { text: "产品中心", route: "/goods" },
       { text: "客户服务", route: "/service" },
       { text: "公司介绍", route: "/about" },
-      { text: "联系我们", route: "/contacts" }
+      { text: "联系我们", route: "/contacts" },
     ]
   })
 });

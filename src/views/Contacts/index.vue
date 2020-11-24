@@ -15,11 +15,7 @@
       </div>
     </Hero>
 
-    <VSection>
-      <p class="is-size-3">
-        组织机构
-      </p>
-      <div style="height: 2rem"></div>
+    <VSection title="组织机构">
       <div class="columns">
         <div
           v-for="(company, key) in companies" :key="key"

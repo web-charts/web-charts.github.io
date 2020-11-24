@@ -84,6 +84,17 @@
     ></component>
 
     <TheTransplotRoutes/>
+
+    <TheCases
+      :images="[
+        'hoisters/sigma/case-1.jpg',
+        'hoisters/case-3.jpg',
+        'hoisters/drum/case-1.jpeg',
+        'hoisters/drum/case-2.jpg',
+        'hoisters/pltype/case-1.jpg',
+        'hoisters/sigma/case-2.jpg',
+      ]"
+    />
   </section>
 </template>
 
@@ -97,6 +108,7 @@ import TheDrumpType from "./TheDrumpType.vue";
 import TheSigmaType from "./TheSigmaType.vue";
 import TheTransplotRoutes from "./TheTransplotRoutes.vue";
 import ThePLType from "./ThePLType.vue";
+import TheCases from "./Cases.vue";
 
 export default defineComponent({
   name: "Hostier",
@@ -105,6 +117,7 @@ export default defineComponent({
     VHero,
     VImage,
     VSection,
+    TheCases,
     TheAdvantages,
     TheDrumpType,
     TheSigmaType,

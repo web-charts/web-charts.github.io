@@ -64,23 +64,21 @@
       </div>
       <div style="height: 3rem"></div>
       <div class="columns">
-        <div class="column">
-          <VImage
-            path="asrs/case-1.jpg"
-            style="width: 100%; height: 100%"
-          ></VImage>
-        </div>
-        <div class="column">
-          <VImage
-            path="asrs/case-3.jpg"
-            style="width: 100%; height: 100%"
-          ></VImage>
-        </div>
-        <div class="column">
-          <VImage
-            path="asrs/case-2.jpeg"
-            style="width: 100%; height: 100%"
-          ></VImage>
+        <div
+          class="column"
+          v-for="path in ['asrs/case-1.jpg', 'asrs/case-3.jpg', 'asrs/case-2.jpeg']"
+          :key="path"
+        >
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <VImage
+                  :path="path"
+                  style="width: 100%; height: 100%"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </div>

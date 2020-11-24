@@ -158,11 +158,7 @@
         class="container is-flex"
         style="justify-content: center; align-items: center"
       >
-        <div class="card">
-          <div class="card-image">
-            <VImage path="home/software-1.png"></VImage>
-          </div>
-        </div>
+        <VImage path="home/software-1.png"></VImage>
       </div>
     </VSection>
   </div>

@@ -2,7 +2,7 @@
   <div id="app-index">
     <Hero
       color="white" image="home/hero-1.jpg"
-      style="height: 600px"
+      style="height: 768px"
     >
       <div style="width: 560px">
         <h1 class="is-size-3 has-text-white">
@@ -74,7 +74,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image">
-                <VImage path="home/hoister-1.jpg" />
+                <VImage path="hoisters/3.png" />
               </figure>
             </div>
           </div>

@@ -87,11 +87,11 @@
 
     <TheCases
       :images="[
-        'hoisters/sigma/case-1.jpg',
-        'hoisters/case-3.jpg',
+        'hoisters/2.jfif',
         'hoisters/drum/case-1.jpeg',
+        'hoisters/case-3.jpg',
         'hoisters/drum/case-2.jpg',
-        'hoisters/pltype/case-1.jpg',
+        'hoisters/3.png',
         'hoisters/sigma/case-2.jpg',
       ]"
     />

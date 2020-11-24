@@ -10,9 +10,7 @@
         </p>
       </div>
     </Hero>
-    <section class="container">
-      <div class="is-hidden-touch" style="height: 6rem"></div>
-      <div class="is-hidden-desktop" style="height: 2rem"></div>
+    <v-section>
       <div class="columns is-vcentered">
         <div class="column">
           <h1 class="is-size-3">
@@ -44,24 +42,25 @@
           <VImage path="service/frame.png"></VImage>
         </figure>
       </div>
-    </section>
-    <div class="is-hidden-touch" style="height: 6rem"></div>
-    <div class="is-hidden-desktop" style="height: 2rem"></div>
-    <section class="has-background-white-ter">
-      <div
-        class="container"
-        style="padding-top: 5rem; padding-bottom: 5rem"
-      >
-        <h1 class="is-size-3 has-text-centered">服务流程</h1>
-        <div style="height: 3rem"></div>
-        <figure class="image">
-          <VImage path="service/processes.jpg"></VImage>
-        </figure>
+    </v-section>
+
+    <v-section title="服务流程">
+      <div class="columns is-variable is-5">
+        <div
+          class="column"
+          v-for="(process, key) in processes" :key="key"
+        >
+          <div :class="`service-process is-${process.color}`">
+            <span class="icon is-medium" style="margin-bottom: 0.75rem">
+              <i :class="`iconfont icon-${process.icon}`"></i>
+            </span>
+            <span>{{process.text}}</span>
+          </div>
+        </div>
       </div>
-    </section>
-    <div class="is-hidden-touch" style="height: 6rem"></div>
-    <div class="is-hidden-desktop" style="height: 2rem"></div>
-    <section class="container">
+    </v-section>
+
+    <v-section>
       <div class="columns">
         <div class="column is-flex is-flex-column is-centered">
           <h1 class="is-size-3">
@@ -80,22 +79,27 @@
           </p>
         </div>
         <div style="width: 3rem; height: 2rem"></div>
-        <figure class="image column">
-          <img
-            src="https://mmbiz.qpic.cn/mmbiz_jpg/MkTmsKKhg7gRcg9eyyQ9fG9L2QlmISagDmNlM9etAbkW3EhKDiaBDbLZfg2BPbvCzHicYXOXl7BLvaAiaicYafBbkg/0?wx_fmt=jpeg"
-            style="width: 737px; height: 324px"
-          />
-        </figure>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <VImage
+                  path="/service/solution.jfif"
+                  style="width: 737px; height: 324px"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-    <div class="is-hidden-touch" style="height: 8rem"></div>
-    <div class="is-hidden-desktop" style="height: 2rem"></div>
+    </v-section>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
+import VSection from "@/components/VSection/index.vue";
 import Hero from "@/components/Hero/index.vue";
 
 export default defineComponent({
@@ -103,7 +107,18 @@ export default defineComponent({
 
   components: {
     Hero,
-    VImage
-  }
+    VImage,
+    VSection,
+  },
+
+  data: () => ({
+    processes: [
+      { text: "咨询沟通", color: "primary", icon: "fangan" },
+      { text: "规划设计", color: "success", icon: "sheji" },
+      { text: "生产制造", color: "warning", icon: "shengchan" },
+      { text: "安装调试", color: "info", icon: "anzhuang" },
+      { text: "售后服务", color: "link", icon: "shouhou" },
+    ]
+  })
 });
 </script>

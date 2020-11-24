@@ -6,7 +6,7 @@
           v-for="route in routes"
           class="button"
           :key="route"
-          style="width: 160px; height: 200px;"
+          style="width: 160px; height: 200px; cursor: default"
         >
             <div>
               <span class="is-size-5">{{route}}</span>

@@ -35,10 +35,19 @@
     <VSection>
       <div class="columns is-vcentered">
         <div class="is-hidden-touch" style="height: 450px"></div>
-        <figure class="image column is-5">
-          <VImage path="about/company.jpg"></VImage>
-        </figure>
+
+        <div class="column is-5">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <VImage path="about/company.jpg"></VImage>
+              </figure>
+            </div>
+          </div>
+        </div>
+
         <div style="width: 1rem"></div>
+
         <div class="column">
           <div class="content">
             <p class="is-hidden-mobile is-size-3">

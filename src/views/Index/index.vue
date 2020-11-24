@@ -43,7 +43,7 @@
             <VImage
               :path="`home/partners/${item}.png`"
               style="width: 320px; height: 160px;"
-            ></VImage>
+            />
           </div>
         </div>
       </div>
@@ -71,11 +71,13 @@
         </div>
         <div style="width: 2rem; height: 1rem"></div>
         <div class="column">
-          <figure class="image">
-            <VImage
-              path="home/hoister-1.jpg"
-            ></VImage>
-          </figure>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <VImage path="home/hoister-1.jpg" />
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </VSection>
@@ -101,7 +103,13 @@
         </div>
         <div style="width: 2rem; height: 1rem"></div>
         <div class="column">
-          <VImage path="home/liku-1.jpg"></VImage>
+          <div class="card">
+            <div class="card-image">
+            <figure class="image">
+              <VImage path="home/liku-1.jpg" />
+            </figure>
+            </div>
+          </div>
         </div>
       </div>
     </VSection>
@@ -126,9 +134,13 @@
         </div>
         <div style="width: 2rem" v-style:height="height"></div>
         <div class="column">
-          <figure class="image">
-            <VImage path="home/device-1.png"></VImage>
-          </figure>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <VImage path="home/device-1.png" />
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </VSection>
@@ -146,7 +158,11 @@
         class="container is-flex"
         style="justify-content: center; align-items: center"
       >
-        <VImage path="home/software-1.png"></VImage>
+        <div class="card">
+          <div class="card-image">
+            <VImage path="home/software-1.png"></VImage>
+          </div>
+        </div>
       </div>
     </VSection>
   </div>

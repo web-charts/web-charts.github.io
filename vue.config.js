@@ -14,17 +14,16 @@ module.exports = {
           staticDir: path.resolve(__dirname, "./dist"),
           routes: [
             "/",
-            // "/news",
-            // "/about",
-            // "/service",
-            // "/prices/hoister",
-            // "/prices/hoister/created",
+            "/index.html",
+            "/about",
+            "/service",
+            "/contacts",
             "/products/hoisters",
-            // "/products/rgv",
-            // "/products/agv",
-            // "/products/asrs",
-            // "/products/palletizing-robot",
-            // "/404",
+            "/products/rgv",
+            "/products/agv",
+            "/products/asrs",
+            "/products/palletizing-robot",
+            "/404",
           ]
         })
       );

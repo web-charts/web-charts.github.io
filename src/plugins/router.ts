@@ -4,7 +4,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Index",
-    alias: "/",
     component: () => import("@/views/Index/index.vue")
   },
   {
@@ -58,6 +57,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/Prices.Hoister/Created.vue")
       }
     ]
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/"
   }
 ];
 

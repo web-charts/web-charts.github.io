@@ -2,14 +2,20 @@
   <aside class="menu">
     <ul class="menu-list">
       <li v-for="(menu, key) in menus" :key="key">
+        <a
+          v-if="menu.link"
+          :href="menu.link"
+        >
+          {{menu.text}}
+        </a>
         <router-link
           custom
-          v-if="!menu.children"
+          v-else-if="!menu.children"
           :to="menu.route"
           :key="key + 'item'"
           v-slot="{ navigate }"
         >
-          <a @click="navigate() && handleClick()">
+          <a @click="() => navigate() && handleClick()">
             {{menu.text}}
           </a>
         </router-link>
@@ -24,7 +30,7 @@
             >
               <a
                 v-class:is-active="isActive"
-                @click="navigate"
+                @click="() => navigate() && handleClick()"
               >
                 {{submenu.text}}
               </a>

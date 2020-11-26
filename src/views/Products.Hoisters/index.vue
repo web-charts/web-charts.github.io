@@ -27,7 +27,9 @@
       :is="tabs[currentTab].component"
     />
 
-    <TheTransplotRoutes/>
+    <TheTransplotRoutes />
+
+    <the-techniques />
 
     <TheCases
       :images="[
@@ -54,6 +56,7 @@ import TheTransplotRoutes from "./TheTransplotRoutes.vue";
 import ThePLType from "./ThePLType.vue";
 import TheCases from "./Cases.vue";
 import TheHero from "./TheHero.vue";
+import TheTechniques from "./TheTechniques.vue";
 
 export default defineComponent({
   name: "Hostier",
@@ -68,7 +71,8 @@ export default defineComponent({
     TheDrumpType,
     TheSigmaType,
     ThePLType,
-    TheTransplotRoutes
+    TheTransplotRoutes,
+    TheTechniques,
   },
 
   data: () => ({

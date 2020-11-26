@@ -4,9 +4,9 @@
     background="white"
     style="padding-top: 0; padding-bottom: 0"
   >
-    <div class="columns">
-      <div class="column is-flex is-centered">
-        <div class="contrasts" style="width: 100%;">
+    <div class="columns is-centered">
+      <div class="column is-flex is-centered is-narrow">
+        <div class="contrasts" style="width: 480px">
           <div class="contrast title is-size-4">
             货梯
           </div>
@@ -46,8 +46,8 @@
           />
         </div>
       </div>
-      <div class="column is-flex is-centered">
-        <div class="contrasts" style="width: 100%;">
+      <div class="column is-flex is-centered is-narrow">
+        <div class="contrasts" style="width: 480px">
           <div class="contrast title is-size-4">
             提升机
           </div>

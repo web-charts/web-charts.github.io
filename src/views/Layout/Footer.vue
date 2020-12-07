@@ -7,7 +7,11 @@
       <div class="columns is-centered is-gapless">
         <p class="column is-narrow">©2019 www.als-yuchuan.com</p>
         <div style="width: 0.5rem; height: 1rem"></div>
-        <p class="column is-narrow">沪ICP备16024334号</p>
+        <p class="column is-narrow">
+          <a class="has-text-white" href="https://beian.miit.gov.cn/">
+            沪ICP备16024334号
+          </a>
+        </p>
       </div>
     </div>
   </footer>

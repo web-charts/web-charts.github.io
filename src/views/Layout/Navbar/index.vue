@@ -61,7 +61,15 @@ export default defineComponent({
           { text: "码垛机器人", route: "/products/palletizing-robot" },
         ]
       },
-      { text: "企业资讯", link: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NzIxMTgyMA==&action=getalbum&album_id=1346581013702705154&scene=173&from_msgid=2247484657&from_itemidx=1&count=3#wechat_redirect" },
+      {
+        text: "企业资讯",
+        children: [
+          {
+            text: "科技前沿",
+            link: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NzIxMTgyMA==&action=getalbum&album_id=1346581013702705154&scene=173&from_msgid=2247484657&from_itemidx=1&count=3#wechat_redirect",
+          },
+        ]
+      },
       // { text: "产品中心", route: "/goods" },
       { text: "客户服务", route: "/service" },
       { text: "公司介绍", route: "/about" },

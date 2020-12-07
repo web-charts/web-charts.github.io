@@ -29,7 +29,7 @@
 
     <TheTransplotRoutes />
 
-    <the-techniques />
+    <!-- <the-techniques /> -->
 
     <TheCases
       :images="[

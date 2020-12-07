@@ -22,7 +22,15 @@
         <a v-else>{{menu.text}}</a>
         <ul v-if="menu.children">
           <li v-for="(submenu, key) in menu.children" :key="key">
+            <a
+              v-if="submenu.link"
+              :href="submenu.link"
+              target="_black"
+            >
+              {{submenu.text}}
+            </a>
             <router-link
+              v-else
               custom
               :to="submenu.route"
               @click.self="handleClick"

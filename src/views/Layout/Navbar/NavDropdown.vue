@@ -15,21 +15,33 @@
         style="width: 200px"
         @click="isHovered = false"
       >
-        <router-link
-          custom
-          v-for="(menu, key) in menus"
-          :key="key" tag="p"
-          :to="menu.route"
-          v-slot="{ navigate, isActive }"
-        >
-          <p
+        <template v-for="(menu, key) in menus" :key="key">
+          <div
+            v-if="menu.link"
             class="dropdown-item"
-            v-class:is-active="isActive"
-            @click="navigate"
           >
-            {{menu.text}}
-          </p>
-        </router-link>
+            <a
+              target="_black"
+              :href="menu.link"
+            >
+              {{menu.text}}
+            </a>
+          </div>
+          <router-link
+            v-else
+            custom
+            :to="menu.route"
+            v-slot="{ navigate, isActive }"
+          >
+            <p
+              class="dropdown-item"
+              v-class:is-active="isActive"
+              @click="navigate"
+            >
+              {{menu.text}}
+            </p>
+          </router-link>
+        </template>
       </div>
     </div>
   </div>
@@ -60,5 +72,9 @@ export default defineComponent({
       );
     }
   },
+
+  created () {
+    console.log(this.menus);
+  }
 });
 </script>

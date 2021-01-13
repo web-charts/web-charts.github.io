@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar from "./Navbar/index.vue";
-import Footer from "./Footer.vue";
+import Footer from "./views/Layout/Footer.vue";
+import Navbar from "./views/Layout/Navbar/index.vue";
 
 export default defineComponent({
   name: "App",

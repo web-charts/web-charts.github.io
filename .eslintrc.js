@@ -13,10 +13,12 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/no-explicit-any": ["off"],
+    "arrow-parens": ["off"],
     "comma-dangle": ["off"],
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "quotes": ["error", "double"],
     "space-before-function-paren": ["error", "always"],
+    "no-return-assign": ["off"],
   },
 };

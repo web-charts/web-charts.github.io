@@ -71,10 +71,6 @@ export default defineComponent({
         (menu) => this.$route.fullPath.includes(menu.route)
       );
     }
-  },
-
-  created () {
-    console.log(this.menus);
   }
 });
 </script>

@@ -15,16 +15,20 @@ module.exports = {
           staticDir: path.resolve(__dirname, "./dist"),
           routes: [
             "/",
-            "/index.html",
-            "/about",
-            "/service",
-            "/contacts",
-            "/products/hoisters",
-            "/products/rgv",
-            "/products/agv",
-            "/products/asrs",
-            "/products/palletizing-robot",
             "/404",
+            "/index.html",
+            ...[
+              "zh_CN", "en_US"
+            ].map(lang => [
+              `/${lang}/about`,
+              `/${lang}/service`,
+              `/${lang}/contacts`,
+              `/${lang}/products/hoisters`,
+              `/${lang}/products/rgv`,
+              `/${lang}/products/agv`,
+              `/${lang}/products/asrs`,
+              `/${lang}/products/palletizing-robot`,
+            ]).flat(Infinity)
           ]
         })
       );

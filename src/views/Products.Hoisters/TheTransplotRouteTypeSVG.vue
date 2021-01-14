@@ -5,7 +5,7 @@
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMinYMin meet"
   >
-    <template v-if="type === 'Z型'">
+    <template v-if="type === 'Z'">
       <polygon points="
         0 250, 150 100, 150 190
         560 190, 560 690, 850 690
@@ -14,7 +14,7 @@
         440 310, 150, 310, 150 400
       "/>
     </template>
-    <template v-if="type === 'C型'">
+    <template v-if="type === 'C'">
       <polygon points="
         440 190, 850, 190
         850 100, 1000 250
@@ -24,7 +24,7 @@
         850 900, 850 810, 440 810
       "/>
     </template>
-    <template v-if="type === 'F型'">
+    <template v-if="type === 'F'">
       <polygon points="
         440 90, 850, 90
         850 0, 1000 150
@@ -37,7 +37,7 @@
         150 700 150 790 440 790
       "/>
     </template>
-    <template v-if="type === 'ZE型'">
+    <template v-if="type === 'ZE'">
       <polygon points="
         440 90, 850, 90
         850 0, 1000 150
@@ -52,7 +52,7 @@
         150 700, 150 790, 440 790
       "/>
     </template>
-    <template v-if="type === 'FE型'">
+    <template v-if="type === 'FE'">
       <polygon points="
         440 90, 850, 90
         850 0, 1000 150
@@ -70,7 +70,7 @@
         150 90
       "/>
     </template>
-    <template v-if="type === 'EE型'">
+    <template v-if="type === 'EE'">
       <polygon points="
         440 90, 850, 90
         850 0, 1000 150
@@ -90,7 +90,7 @@
         150 90
       "/>
     </template>
-    <template v-if="type === 'E型'">
+    <template v-if="type === 'E'">
       <polygon points="
         440 90, 850, 90
         850 0, 1000 150
@@ -103,7 +103,7 @@
         850 1000, 850 910, 440 910
       "/>
     </template>
-    <template v-if="type === 'CC型'">
+    <template v-if="type === 'CC'">
       <polygon points="
         0 250, 150 100, 150 190
         850 190, 850 100, 1000 250
@@ -116,7 +116,7 @@
         440 310, 150, 310, 150 400
       "/>
     </template>
-    <template v-if="type === 'ZC型'">
+    <template v-if="type === 'ZC'">
       <polygon points="
         0 250, 150 100, 150 190
         560 190, 560 690, 850 690
@@ -127,7 +127,7 @@
         440 310, 150, 310, 150 400
       "/>
     </template>
-    <template v-if="type === 'CZ型'">
+    <template v-if="type === 'CZ'">
       <polygon points="
         0 250, 150 100, 150 190
         850 190, 850 100, 1000 250
@@ -138,7 +138,7 @@
         440 310, 150, 310, 150 400
       "/>
     </template>
-    <template v-if="type === 'L型'">
+    <template v-if="type === 'L'">
       <polygon points="
         0 250, 150 100, 150 190
         550 190, 550 575, 450 575
@@ -150,7 +150,7 @@
         500 900, 350 750, 450 750
       "/>
     </template>
-    <template v-if="type === 'LF型'">
+    <template v-if="type === 'LF'">
       <polygon points="
         0 150, 150 0, 150 90
         560 90, 560 750, 440 750
@@ -165,7 +165,7 @@
         500 1000, 350 900, 440 900
       "/>
     </template>
-    <template v-if="type === 'LL型'">
+    <template v-if="type === 'LL'">
       <polygon points="
         0 150, 150 0, 150 90
         560 90, 560 210

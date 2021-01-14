@@ -9,15 +9,10 @@
             class="is-size-3"
             style="margin-bottom: 1rem"
           >
-            自动化立体仓库
+            {{$t("title1")}}
           </h1>
           <h2>
-            自动化立体仓库是充分利用空间，
-            实现货物的最大存储量、存储的高度自动化、存储的高速化和信息的一体化，
-            完全由计算机操控的自动化物流存储系统仓库(AS/RS系统)
-            通常是由立体货架、有轨巷道堆垛机、出入库托盘输送机系统、
-            尺寸检测条码阅读系统及计算机操作系统组成的复杂自动化集成化物流理念，
-            采用先进的控制、总线、通讯和信息技术，通过以上设备的协调动作进行出入库作业。
+            {{$t("title2")}}
           </h2>
         </div>
         <div style="width: 2rem"></div>
@@ -36,7 +31,7 @@
     <div class="is-hidden-tablet" style="height: 3rem"></div>
     <div class="container">
       <h1 class="is-size-4 has-text-centered">
-        产品特点
+        {{$t("features")}}
       </h1>
       <div style="height: 3rem"></div>
       <div
@@ -60,7 +55,7 @@
     <div class="is-hidden-tablet" style="height: 3rem"></div>
     <div class="container">
       <div class="is-size-4 has-text-centered">
-        使用案例
+        {{$t("cases")}}
       </div>
       <div style="height: 3rem"></div>
       <div class="columns">
@@ -90,6 +85,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import VImage from "@/components/Image.vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 
 export default defineComponent({
   name: "Asrs",
@@ -98,17 +94,72 @@ export default defineComponent({
     VImage
   },
 
-  data: () => ({
-    features: [
+  computed: {
+    features: vm => [
       [
-        ["高利用率", "通过使用高层货架存储的方式，大幅提高空间利用率。"],
-        ["高生产率", "加快货物的存取节奏，减轻劳动强度，提高生产效率"]
+        [vm.$t("feat11"), vm.$t("feat12")],
+        [vm.$t("feat21"), vm.$t("feat22")]
       ],
       [
-        ["系统兼容", "与其他物流系统对接，提高企业整体信息化水平"],
-        ["智能控制", "控制库存和管理更加灵活，无须人员介入即可快速操作"]
+        [vm.$t("feat31"), vm.$t("feat32")],
+        [vm.$t("feat41"), vm.$t("feat42")]
       ]
     ]
-  })
+  },
+
+  i18n: {
+    messages: {
+      [zhCN]: {
+        title1: "自动化立体仓库",
+        title2: `
+          自动化立体仓库是充分利用空间，
+          实现货物的最大存储量、存储的高度自动化、存储的高速化和信息的一体化，
+          完全由计算机操控的自动化物流存储系统仓库(AS/RS系统)
+          通常是由立体货架、有轨巷道堆垛机、出入库托盘输送机系统、
+          尺寸检测条码阅读系统及计算机操作系统组成的复杂自动化集成化物流理念，
+          采用先进的控制、总线、通讯和信息技术，通过以上设备的协调动作进行出入库作业。
+        `,
+        features: "产品特性",
+        cases: "使用案例",
+        feat11: "高利用率",
+        feat12: "通过使用高层货架存储的方式，大幅提高空间利用率。",
+        feat21: "高生产率",
+        feat22: "加快货物的存取节奏，减轻劳动强度，提高生产效率。",
+        feat31: "系统兼容",
+        feat32: "与其他物流系统对接，提高企业整体信息化水平。",
+        feat41: "智能控制",
+        feat42: "控制库存和管理更加灵活，无须人员介入即可快速操作。",
+      },
+      [enUS]: {
+        title1: "Automatic stereoscopic warehouse",
+        title2: `
+          Automated stereoscopic warehouse is make full use of space,
+          to achieve the maximum storage of goods,
+          storage of high automation, high speed and information integration of the storage,
+          fully automatic computer control logistics warehouse storage system (AS/RS) system is usually composed of three-dimensional shelf,
+          rail roadway stacker, pallet conveyor system,
+          size detection for ins and outs of barcode reading system and computer operating system composed of complex automation integrated logistics idea,
+          USES the advanced control, bus, communication and information technology,
+          through the above equipment coordinated action directly.Automated stereoscopic warehouse is make full use of space,
+          to achieve the maximum storage of goods, storage of high automation,
+          high speed and information integration of the storage,
+          fully automatic computer control logistics warehouse storage system (AS/RS) system is usually composed of three-dimensional shelf,
+          rail roadway stacker, pallet conveyor system, size detection for ins and outs of barcode reading system and computer operating system composed of complex automation integrated logistics idea,
+          USES the advanced control, bus, communication and information technology,
+          through the above equipment coordinated action directly.
+        `,
+        cases: "Cases",
+        features: "Features",
+        feat11: "High utilization",
+        feat12: "Through the use of high shelf storage, greatly improve the utilization of space.",
+        feat21: "High productivity",
+        feat22: "Accelerate the pace of goods storage and withdrawal, reduce labor intensity, improve production efficiency.",
+        feat31: "System compatibility",
+        feat32: "Connect with other logistics systems to improve the overall level of enterprise informatization.",
+        feat41: "Intelligent control",
+        feat42: "Inventory control and management are more flexible and can be operated quickly without personnel intervention.",
+      }
+    }
+  }
 });
 </script>

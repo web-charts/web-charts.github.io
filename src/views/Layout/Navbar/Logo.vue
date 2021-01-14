@@ -4,10 +4,10 @@
       <VImage
         path="common/logo.png"
         class="app-logo-image"
-        style="width: 96px; height: 44px; margin-bottom: 2px"
+        style="width: 96px; height: 44px; margin-bottom: 2px;"
       ></VImage>
-      <span>
-        上海玉串自动化科技有限公司
+      <span style="white-space: nowrap">
+        {{ $t("company") }}
       </span>
     </div>
   </router-link>
@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 import VImage from "@/components/Image.vue";
 
 export default defineComponent({
@@ -22,6 +23,17 @@ export default defineComponent({
 
   components: {
     VImage
+  },
+
+  i18n: {
+    messages: {
+      [zhCN]: {
+        company: "上海玉串自动化科技有限公司",
+      },
+      [enUS]: {
+        company: "Yuchuan Automation Technology",
+      }
+    }
   }
 });
 </script>

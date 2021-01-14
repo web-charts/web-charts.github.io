@@ -1,5 +1,8 @@
 <template>
-  <v-section title="使用案例" style="padding-top: 0">
+  <v-section
+    :title="$t('title')"
+    style="padding-top: 0"
+  >
     <div class="columns is-centered is-multiline">
         <div
           class="column is-4"
@@ -20,6 +23,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 import VImage from "@/components/Image.vue";
 import VSection from "@/components/VSection/index.vue";
 
@@ -33,6 +37,17 @@ export default defineComponent({
 
   props: {
     images: {}
+  },
+
+  i18n: {
+    messages: {
+      [zhCN]: {
+        title: "使用案例"
+      },
+      [enUS]: {
+        title: "Usage Cases"
+      }
+    }
   }
 });
 </script>

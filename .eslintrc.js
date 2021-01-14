@@ -20,5 +20,6 @@ module.exports = {
     "quotes": ["error", "double"],
     "space-before-function-paren": ["error", "always"],
     "no-return-assign": ["off"],
+    "no-shadow": ["off"],
   },
 };

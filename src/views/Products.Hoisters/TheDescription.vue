@@ -23,7 +23,7 @@
             <div class="feature-top"></div>
 
             <p class="is-size-6  feature-title">
-              {{feature[1]}}
+              {{feature}}
             </p>
           </div>
         </div>

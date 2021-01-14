@@ -1,6 +1,6 @@
 <template>
   <VSection
-    title="详细对比"
+    :title="$t('comparision')"
     background="white"
     style="padding-top: 0; padding-bottom: 0"
   >
@@ -8,82 +8,82 @@
       <div class="column is-flex is-centered is-narrow">
         <div class="contrasts" style="width: 480px">
           <div class="contrast title is-size-4">
-            货梯
+            {{$t("lifter")}}
           </div>
           <hr>
           <TheContrast
-            content="搬运能力："
-            highlight="低"
-            comment="（ 1-2 层约 28 板 / h）"
+            :content="$t('lifter.title1')"
+            :highlight="$t('lifter.highlight1')"
+            :comment="$t('lifter.comment1')"
           />
           <hr>
           <TheContrast
-            content="故障率："
-            highlight="高"
-            comment="（平层故障、叉车撞坏等，大于 2.5%）"
+            :content="$t('lifter.title2')"
+            :highlight="$t('lifter.highlight2')"
+            :comment="$t('lifter.comment2')"
           />
           <hr>
           <TheContrast
-            content="建筑成本："
-            highlight="高"
-            comment="（基坑大、需要机房等）"
+            :content="$t('lifter.title3')"
+            :highlight="$t('lifter.highlight3')"
+            :comment="$t('lifter.comment3')"
           />
           <hr>
           <TheContrast
-            content="维护成本："
-            highlight="高"
-            comment="（电梯操作员、每月保养、年检费用）"
+            :content="$t('lifter.title4')"
+            :highlight="$t('lifter.highlight4')"
+            :comment="$t('lifter.comment4')"
           />
           <hr>
           <TheContrast
-            content="特种设备"
-            comment="（需要安全技术监督局许可证）"
+            :content="$t('lifter.title5')"
+            :comment="$t('lifter.comment6')"
           />
           <hr>
           <TheContrast
-            content="实现自动化作业较难"
-            comment="（需要改造，增加软硬件系统）"
+            :content="$t('lifter.title6')"
+            :comment="$t('lifter.comment6')"
           />
         </div>
       </div>
       <div class="column is-flex is-centered is-narrow">
         <div class="contrasts" style="width: 480px">
           <div class="contrast title is-size-4">
-            提升机
+            {{$t("hoister")}}
           </div>
           <hr>
           <TheContrast
-            content="搬运能力："
-            highlight="高"
-            comment="（ 1-2 层约 85 板 / h，约为货梯的 3 倍）"
+            :content="$t('hoister.title1')"
+            :highlight="$t('hoister.highlight1')"
+            :comment="$t('hoister.comment1')"
           />
           <hr>
           <TheContrast
-            content="故障率："
-            highlight="低"
-            comment="（约千分之一）"
+            :content="$t('hoister.title2')"
+            :highlight="$t('hoister.highlight2')"
+            :comment="$t('hoister.comment2')"
           />
           <hr>
           <TheContrast
-            content="建筑成本："
-            highlight="低"
-            comment="（基坑小，无机房等）"
+            :content="$t('hoister.title3')"
+            :highlight="$t('hoister.highlight3')"
+            :comment="$t('hoister.comment3')"
           />
           <hr>
           <TheContrast
-            content="维护成本："
-            highlight="低"
-            comment="（无需操作员，一年 4 次保养）"
+            :content="$t('hoister.title4')"
+            :highlight="$t('hoister.highlight4')"
+            :comment="$t('hoister.comment4')"
           />
           <hr>
           <TheContrast
-            content="非特种设备"
-            comment="（无需安全技术监督局许可证）"
+            :content="$t('hoister.title5')"
+            :comment="$t('hoister.comment5')"
           />
           <hr>
           <TheContrast
-            content="软硬件柔性扩展，实现自动化作业"
-            comment="（直接对接 WMS、AGV 立体库等）"
+            :content="$t('hoister.title6')"
+            :comment="$t('hoister.comment6')"
           />
         </div>
       </div>
@@ -93,6 +93,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 import VSection from "@/components/VSection/index.vue";
 import TheContrast from "./TheContrast.vue";
 
@@ -104,19 +105,83 @@ export default defineComponent({
     TheContrast
   },
 
-  data: () => ({
-    reasons: [
-      ["高可靠", "业界领先的纠删码存储方案，能够提供高达 11 个 9 的数据可靠性。跨数据中心的副本冗余，能够保障服务的超高可用性。"],
-      ["易扩展", "利用七牛云对象存储，您的存储空间无上限的同时也无需担心扩容问题。您能够实现存储需求的弹性伸缩，从而提高业务灵活性。"],
-      ["低成本", "您无需前期投入。七牛云对象存储按需使用、按需付费的便捷性，能够有效避免存储及带宽资源的闲置浪费。"],
-      ["数据智能化", "与七牛云其他产品紧密协同，提供标准 HDFS 访问方式，为大数据和机器学习的海量高速读写场景进行了大量优化。"],
-      ["存储加速", "边缘存储可充分利用可用链路带宽，数据在边缘节点上传和下载可平均提速 60% 以上。"],
-      ["边缘计算", "就近集成边缘计算及边缘缓存服务，边缘存储节点具备本地数据处理能力。"]
-    ]
-  }),
+  i18n: {
+    messages: {
+      [zhCN]: {
+        comparision: "详细对比",
+        lifter: "货梯",
+        hoister: "提升机",
+        "lifter.title1": "搬运能力：",
+        "lifter.highlight1": "低",
+        "lifter.comment1": "（ 1-2 层约 28 板 / h）",
+        "lifter.title2": "故障率：",
+        "lifter.highlight2": "高",
+        "lifter.comment2": "（平层故障、叉车撞坏等，大于 2.5%）",
+        "lifter.title3": "建筑成本：",
+        "lifter.highlight3": "高",
+        "lifter.comment3": "（基坑大、需要机房等）",
+        "lifter.title4": "维护成本：",
+        "lifter.highlight4": "高",
+        "lifter.comment4": "（电梯操作员、每月保养、年检费用）",
+        "lifter.title5": "特种设备",
+        "lifter.comment": "（需要安全技术监督局许可证）",
+        "lifter.title6": "实现自动化作业较难",
+        "lifter.comment6": "（需要改造，增加软硬件系统）",
+        "hoister.title1": "搬运能力：",
+        "hoister.highlight1": "高",
+        "hoister.comment": "（ 1-2 层约 85 板 / h，约为货梯的 3 倍）",
+        "hoister.title2": "故障率：",
+        "hoister.highlight2": "低",
+        "hoister.comment2": "（约千分之一）",
+        "hoister.title3": "建筑成本：",
+        "hoister.highlight3": "低",
+        "hoister.comment3": "（基坑小，无机房等）",
+        "hoister.title4": "维护成本：",
+        "hoister.highlight4": "低",
+        "hoister.comment4": "（无需操作员，一年 4 次保养）",
+        "hoister.title5": "非特种设备",
+        "hoister.comment5": "（无需安全技术监督局许可证）",
+        "hoister.title6": "软硬件柔性扩展，实现自动化作业",
+        "hoister.comment6": "（直接对接 WMS、AGV 立体库等）",
+      },
+      [enUS]: {
+        comparision: "Comparision",
+        lifter: "Cargo lifter",
+        hoister: "Our Product",
+        "lifter.title1": "Transporting capacity: ",
+        "lifter.highlight1": "Low",
+        "lifter.comment1": "(about 28 plates/h for 1-2 layers)",
+        "lifter.title2": "Failure rate: ",
+        "lifter.highlight2": "High",
+        "lifter.comment2": "(Flat fault, forklift truck crash, etc., more than 2.5%)",
+        "lifter.title3": "Construction cost: ",
+        "lifter.highlight3": "High",
+        "lifter.comment3": "(Large foundation pit and machine room, etc.)",
+        "lifter.title4": "Maintenance cost: ",
+        "lifter.highlight4": "High",
+        "lifter.comment4": "(Elevator operator, monthly maintenance, annual inspection fee)",
+        "lifter.title5": "Special equipment",
+        "lifter.comment": "(License of BST is required)",
+        "lifter.title6": "It is difficult to achieve automation",
+        "lifter.comment6": "(Need to modify and add hardware and software system)",
+        "hoister.title1": "Transporting capacity: ",
+        "hoister.highlight1": "High",
+        "hoister.comment": "(about 85 plates/h for 1-2 layers,three times than traditional cargo lift )",
+        "hoister.title2": "Failure cost: ",
+        "hoister.highlight2": "Low",
+        "hoister.comment2": "(about 1/1000)",
+        "hoister.title3": "Maintenance cost: ",
+        "hoister.highlight3": "Low",
+        "hoister.comment3": "(Small foundation pit,without machine room, etc.)",
+        "hoister.title4": "Maintenance cost: ",
+        "hoister.highlight4": "Low",
+        "hoister.comment4": "(No operator required, 4 maintenance times a year)",
+        "hoister.title5": "Non-special equipment",
+        "hoister.comment5": "(No BST license is required)",
+        "hoister.title6": "Flexible extension of software and hardware",
+        "hoister.comment6": "(Direct correspond to WMS, AGV, etc.)",
+      }
+    }
+  }
 });
 </script>
-
-<style lang="sass">
-
-</style>

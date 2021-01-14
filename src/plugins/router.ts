@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { langMap } from "@/assets/lang";
-import i18n from "./i18n";
+import { i18n, hasLang } from "@/plugins/i18n";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -84,6 +83,10 @@ const router = createRouter({
       name: "Lang Middleware",
       component: () => import("@/views/Lang/index.vue"),
       children: routes
+    },
+    {
+      path: "/404",
+      redirect: "/"
     }
   ],
 });
@@ -91,7 +94,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang as string || i18n.global.locale;
 
-  if (!langMap[lang]) {
+  if (!hasLang(lang)) {
     next("/");
   } else {
     next();

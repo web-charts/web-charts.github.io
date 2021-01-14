@@ -1,5 +1,5 @@
 <template>
-  <VSection title="企业发展">
+  <VSection :title="$t('timeline')">
     <ul class="timeline">
       <!-- Item 1 -->
       <li v-for="(item, index) in data" :key="index">
@@ -20,6 +20,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import VSection from "@/components/VSection/index.vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 
 export default defineComponent({
   name: "Timeline",
@@ -28,16 +29,39 @@ export default defineComponent({
     VSection
   },
 
-  data: () => ({
-    data: [
-      ["2019-12", "通过 ISO 国际标准质量、环境、安全管理三体系认证"],
-      ["2018-9", "上海玉串注册资金增至人民币5千万元"],
-      ["2018-6", "大连天瞳科技有限公司成立"],
-      ["2017-1", "上海玉串注册资金增至人民币1千万元"],
-      ["2016-1", "珠海分公司正式成立"],
-      ["2015-2", "上海玉串正式成立"],
+  computed: {
+    data: vm => [
+      ["2019-12", vm.$t("content1")],
+      ["2018-9", vm.$t("content2")],
+      ["2018-6", vm.$t("content3")],
+      ["2017-1", vm.$t("content4")],
+      ["2016-1", vm.$t("content5")],
+      ["2015-2", vm.$t("content6")],
     ]
-  })
+  },
+
+  i18n: {
+    messages: {
+      [zhCN]: {
+        timeline: "企业发展",
+        content1: "通过 ISO 国际标准质量、环境、安全管理三体系认证",
+        content2: "上海玉串注册资金增至人民币 5 千万元",
+        content3: "大连天瞳科技有限公司成立",
+        content4: "上海玉串注册资金增至人民币 1 千万元",
+        content5: "珠海分公司正式成立",
+        content6: "上海玉串正式成立",
+      },
+      [enUS]: {
+        timeline: "Timeline",
+        content1: "Passed ISO international standard quality, environment, safety management system certification.",
+        content2: "Shanghai Yuchuan registered capital increased to 50 million.",
+        content3: "Dalian Tiantong Technology Co., ltd. Was established.",
+        content4: "Shanghai Yuchuan registered capital increased to 10 million.",
+        content5: "Zhuhai Yuchuan was officially established.",
+        content6: "Shanghai Yuchuan was officially established.",
+      },
+    }
+  }
 });
 </script>
 

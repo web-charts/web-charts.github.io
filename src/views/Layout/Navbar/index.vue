@@ -19,25 +19,25 @@
         </a>
       </div>
 
-      <div class="nav-item">
+      <div class="nav-item" style="margin-left: 0; margin-top: 0.5rem">
         <a
           v-if="isZhCN"
           @click="changeLang"
-          class="icon" style="margin-left: -1rem"
+          class="icon"
         >
           <i
             class="iconfont icon-en-US"
-            style="font-size: 1.75rem; margin-top: 0.6rem"
+            style="font-size: 1.75rem"
           ></i>
         </a>
         <a
           v-else
           @click="changeLang"
-          class="icon" style="margin-left: -1rem"
+          class="icon"
         >
           <i
             class="iconfont icon-zh-CN"
-            style="font-size: 1.75rem; margin-top: 0.6rem"
+            style="font-size: 1.75rem"
           ></i>
         </a>
       </div>
@@ -57,8 +57,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { enUS, zhCN } from "@/assets/lang";
-import i18n from "@/plugins/i18n";
+import {
+  isZhCN, locale, enUS, zhCN
+} from "@/plugins/i18n";
 import Logo from "./Logo.vue";
 import NavMenu from "./NavMenu.vue";
 import NavItems from "./NavItems.vue";
@@ -119,12 +120,10 @@ export default defineComponent({
   }),
 
   computed: {
-    isZhCN () {
-      return i18n.global.locale === zhCN;
-    },
+    isZhCN,
 
     menus (): Menu[] {
-      return handleMenusLang(menus, i18n.global.locale, this.$t);
+      return handleMenusLang(menus, locale(), this.$t);
     }
   },
 
@@ -159,13 +158,13 @@ export default defineComponent({
       [enUS]: {
         home: "Home",
         products: "Product",
-        hoisters: "Hoisters",
+        hoisters: "Vertical Conveyor",
         asrs: "ASRS",
         rgv: "RGV",
         agv: "AGV",
-        "palletizing-robot": "Robot",
+        "palletizing-robot": "Palletizing robot",
         news: "News",
-        frontier: "Technical",
+        frontier: "Technology Frontier",
         service: "Service",
         about: "About",
         contact: "Contact"

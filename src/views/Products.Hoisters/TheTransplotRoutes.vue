@@ -1,5 +1,8 @@
 <template>
-  <VSection title="出入口方向" style="padding-top: 0">
+  <VSection
+    :title="$t('title')"
+    style="padding-top: 0"
+  >
     <div class="is-flex is-centered">
       <div class="buttons is-centered has-addons" style="max-width: 960px">
         <a
@@ -9,9 +12,11 @@
           style="width: 160px; height: 200px; cursor: default"
         >
             <div>
-              <span class="is-size-5">{{route}}</span>
+              <span class="is-size-5">
+                {{`${route}${$t("type")}`}}
+              </span>
               <div style="height: 1rem"></div>
-              <!-- BUG: 整个 Button 存在跳闪的情况 -->
+
               <div style="width: 100px; height: 100px;">
                 <TheTransplotRouteTypeSVG :type="route" />
               </div>
@@ -24,12 +29,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { enUS, zhCN } from "@/plugins/i18n";
 import VSection from "@/components/VSection/index.vue";
 import TheTransplotRouteTypeSVG from "./TheTransplotRouteTypeSVG.vue";
 
 const routes = [
-  "Z型", "C型", "CC型", "CZ型", "ZC型", "F型",
-  "E型", "ZE型", "FE型", "EE型", "LF型", "LL型"
+  "Z", "C", "CC", "CZ", "ZC", "F",
+  "E", "ZE", "FE", "EE", "LF", "LL"
 ];
 
 export default defineComponent({
@@ -42,6 +48,19 @@ export default defineComponent({
 
   computed: {
     routes: () => routes
+  },
+
+  i18n: {
+    messages: {
+      [zhCN]: {
+        title: "出入口方向",
+        type: " 型"
+      },
+      [enUS]: {
+        title: "Door Direction",
+        type: "-Type"
+      }
+    }
   }
 });
 </script>

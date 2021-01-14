@@ -40,7 +40,8 @@ export default {
   name: "VideoButton",
   props: {
     text: {
-      default: "观看视频"
+      type: String,
+      required: true
     },
     // 缓存时间，单位 s
     cacheTime: {

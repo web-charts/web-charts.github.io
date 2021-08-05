@@ -122,7 +122,8 @@ export default defineComponent({
       { icon: "sociology", text: vm.$t("brief4") },
       { icon: "manage", text: vm.$t("brief5") },
       { icon: "fair", text: vm.$t("brief6") },
-      { icon: "engeneering", text: vm.$t("brief7") }
+      { icon: "engeneering", text: vm.$t("brief7") },
+      { icon: "commitment", text: vm.$t("brief8") }
     ],
   },
 
@@ -142,6 +143,7 @@ export default defineComponent({
         brief5: "以全员参与为企业管理方针",
         brief6: "以公平公正为企业经营准则",
         brief7: "以自主创新，奉献精品工程为团队使命",
+        brief8: "以精工至臻，信诺而达为质量追求",
       },
       [enUS]: {
         title1: "Started in 2015",
@@ -173,6 +175,7 @@ export default defineComponent({
         brief5: "Take full participation as the enterprise management policy.",
         brief6: "Take fairness and justice as the enterprise management criterion.",
         brief7: "Independent innovation, dedicated quality engineering for the team mission.",
+        brief8: "Take the impeccable project and commitment as the pursuit of quality",
       }
     }
   }

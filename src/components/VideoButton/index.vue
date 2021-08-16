@@ -23,6 +23,7 @@
           autoplay="muted"
           preload="auto"
           controls
+          controlsList="nodownload"
           ref="video"
         >
           <slot></slot>

@@ -13,6 +13,7 @@
           class="video-js vjs-default-skin vjs-big-play-centered"
           preload="auto"
           controls
+          controlsList="nodownload"
           ref="video"
           style="max-width: 760px; text-align: center"
         >

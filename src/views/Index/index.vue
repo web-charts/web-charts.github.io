@@ -40,16 +40,13 @@
       <TheDevices @click-more="handleJump" />
     </VSection>
 
-    <VSection
-      v-if="isZhCN"
-      background="white"
-    >
-      <TheSoftware />
+    <VSection background="white">
+      <TheSoftware  @click-more="handleJump" />
     </VSection>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 import { enUS, zhCN, isZhCN } from "@/plugins/i18n";
 import VImage from "@/components/Image.vue";

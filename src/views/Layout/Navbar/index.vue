@@ -81,6 +81,7 @@ const menus: Menu[] = [
       { text: "rgv", route: "/products/rgv" },
       { text: "agv", route: "/products/agv" },
       { text: "palletizing-robot", route: "/products/palletizing-robot" },
+      { text: "wms", route: "/products/wms" },
     ]
   },
   {
@@ -149,6 +150,7 @@ export default defineComponent({
         rgv: "RGV 有轨穿梭车",
         agv: "AGV 无人搬运车",
         "palletizing-robot": "码垛机器人",
+        wms: "智慧仓储管理系统",
         news: "企业资讯",
         frontier: "科技前沿",
         service: "客户服务",
@@ -163,6 +165,7 @@ export default defineComponent({
         rgv: "RGV",
         agv: "AGV",
         "palletizing-robot": "Palletizing robot",
+        wms: "WMS",
         news: "News",
         frontier: "Technology Frontier",
         service: "Service",

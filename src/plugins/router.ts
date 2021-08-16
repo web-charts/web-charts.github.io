@@ -38,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/Products.PalletizingRobot/index.vue")
   },
   {
+    path: "products/wms",
+    name: "Products.Wms",
+    component: () => import("@/views/Products.Wms/index.vue")
+  },
+  {
     path: "about",
     name: "About",
     component: () => import("@/views/About/index.vue")

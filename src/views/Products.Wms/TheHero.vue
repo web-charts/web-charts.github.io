@@ -30,7 +30,18 @@
         <p>
           {{$t('section')}}
         </p>
+
+        <div style="height: 1rem"></div>
+
+        <a
+          class="button is-link"
+          href="http://wms.als-yuchuan.com"
+          target="view_window"
+        >
+          在线试用
+        </a>
       </div>
+
       <div style="width: 3rem; height: 2rem"></div>
 
       <div
@@ -72,6 +83,7 @@ export default defineComponent({
       [zhCN]: {
         title: "智慧仓储管理系统",
         subtitle: "互联网服务架构 + 过程管理方案",
+        tryOnline: "在线试用",
         section: `
           本系统既包含入库、出库、盘点、移库、货权转移等核心功能，
           又覆盖倒短、装卸、打/拆托、码垛、缠膜、装箱等具体业务操作，
@@ -83,6 +95,7 @@ export default defineComponent({
       [enUS]: {
         title: "Warehouse Management System",
         subtitle: "Internet service framework, process management scheme",
+        tryOnline: "Try Online",
         section: `
           The system not only includes core functions such as warehousing,
           outbound, inventory counting, warehouse transfer and cargo right transfer,

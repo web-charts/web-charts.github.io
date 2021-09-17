@@ -76,7 +76,8 @@ export default defineComponent({
     height: "0.75rem",
     partners: [
       "招商局", "格力", "武汉万吨",
-      "中外运", "世纪联华", "鑫荣懋"
+      "中外运", "世纪联华", "鑫荣懋",
+      "鲜丰水果", "美源供应链"
     ],
   }),
 

@@ -31,12 +31,14 @@ export default defineComponent({
 
   computed: {
     data: vm => [
-      ["2019-12", vm.$t("content1")],
-      ["2018-9", vm.$t("content2")],
-      ["2018-6", vm.$t("content3")],
-      ["2017-1", vm.$t("content4")],
-      ["2016-1", vm.$t("content5")],
-      ["2015-2", vm.$t("content6")],
+      ["2020-1", vm.$t("content8")],
+      ["2019-12", vm.$t("content7")],
+      ["2019-8", vm.$t("content6")],
+      ["2018-9", vm.$t("content5")],
+      ["2018-6", vm.$t("content4")],
+      ["2017-1", vm.$t("content3")],
+      ["2016-1", vm.$t("content2")],
+      ["2015-2", vm.$t("content1")],
     ]
   },
 
@@ -44,21 +46,25 @@ export default defineComponent({
     messages: {
       [zhCN]: {
         timeline: "企业发展",
-        content1: "通过 ISO 国际标准质量、环境、安全管理三体系认证",
-        content2: "上海玉串注册资金增至人民币 5 千万元",
-        content3: "大连天瞳科技有限公司成立",
-        content4: "上海玉串注册资金增至人民币 1 千万元",
-        content5: "珠海分公司正式成立",
-        content6: "上海玉串正式成立",
+        content8: "大连生产工厂正式启用",
+        content7: "通过 ISO 国际标准质量、环境、安全管理三体系认证",
+        content6: "玉串自动化大连研发中心启用",
+        content5: "上海玉串注册资金增至人民币 5 千万元",
+        content4: "大连天瞳科技有限公司成立",
+        content3: "上海玉串注册资金增至人民币 1 千万元",
+        content2: "珠海分公司正式成立",
+        content1: "上海玉串正式成立",
       },
       [enUS]: {
         timeline: "Timeline",
-        content1: "Passed ISO international standard quality, environment, safety management system certification.",
-        content2: "Shanghai Yuchuan registered capital increased to 50 million.",
-        content3: "Dalian Tiantong Technology Co., ltd. Was established.",
-        content4: "Shanghai Yuchuan registered capital increased to 10 million.",
-        content5: "Zhuhai Yuchuan was officially established.",
-        content6: "Shanghai Yuchuan was officially established.",
+        content8: "Dalian production center was officially established",
+        content7: "Passed ISO international standard quality, environment, safety management system certification.",
+        content6: "Dalian research and development centre was officially established",
+        content5: "Shanghai Yuchuan registered capital increased to 50 million.",
+        content4: "Dalian Tiantong Technology Co., ltd. Was established.",
+        content3: "Shanghai Yuchuan registered capital increased to 10 million.",
+        content2: "Zhuhai Yuchuan was officially established.",
+        content1: "Shanghai Yuchuan was officially established.",
       },
     }
   }
